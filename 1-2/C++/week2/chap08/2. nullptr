@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+//nullptr=null pointer literal
+
+int main() {
+	int* pointer = nullptr;
+	int x = 123;
+	pointer = &x;
+	if (pointer == nullptr) {
+		cout << "address was not assigned" << endl; //if cout<<*pointer: bomb!
+	}
+	else cout << "address was assigned!"<<*pointer << endl;
+
+	return 0;
+
+}
