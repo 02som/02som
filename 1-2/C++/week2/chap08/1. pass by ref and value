@@ -1,0 +1,39 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+//pass by value
+
+void swap(string x, string y) { //copying the original, not changing the original x&y
+	string temp;
+	temp = x;
+	x = y;
+	y = temp;
+}
+
+int main() {
+	string x = "Cool_kid";
+	string y = "Nyanbare";
+	cout << "x:" << x << "\ny:" << y << endl;
+	swap(x, y);
+	cout << "x:" << x << "\ny:" << y << endl;
+	return 0;
+}
+
+//pass by reference
+
+void swap(string &x, string &y) { //reference!
+	string temp;
+	temp = x;
+	x = y;
+	y = temp;
+}
+
+int main() {
+	string x = "Cool_kid";
+	string y = "Nyanbare";
+	cout << "x:" << x << "\ny:" << y << endl;
+	swap(x, y);
+	cout << "x:" << x << "\ny:" << y << endl;
+	return 0;
+}
